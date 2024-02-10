@@ -1,4 +1,4 @@
-name: "Marp CLI Action"
+name: "Marp CLI Action v3"
 author: "KoharaKazuya"
 description: "Run @marp-team/marp-cli to convert markdown files into static HTML / CSS, PDF, PowerPoint document, and image(s)"
 
