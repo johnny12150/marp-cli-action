@@ -2,10 +2,12 @@ const { Marp } = require('@marp-team/marp-core')
 const { Marpit } = require('@marp-team/marpit')
 const highlightLines = require('markdown-it-highlight-lines')
 
+const marpit = new Marpit()
+
 module.exports = (opts) => new Marp(opts)
   .use(highlightLines)
-  .use(({ Marpit }) => {
-      const { highlighter } = Marpit
+  .use(({ marpit }) => {
+      const { highlighter } = marpit
   
       // Override Marp Core's highlighter to wrap each lines by ordered list items
       marpit.highlighter = (...args) => {
