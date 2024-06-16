@@ -3,6 +3,6 @@
     "@actions/core": "^1.2.6",
     "@actions/exec": "^1.0.4",
     "cosmiconfig": "^7.0.0",
-    "markdown-it-highlight-lines": "^1.0.1",
+    "markdown-it-highlight-lines": "^1.0.1"
   }
 }
