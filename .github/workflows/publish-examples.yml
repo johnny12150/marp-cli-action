@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-      - feature/highlight-code
+      - feature/code-line-number
 
 jobs:
   publish:
