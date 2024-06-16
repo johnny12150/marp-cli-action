@@ -5,7 +5,7 @@ WORKDIR /github/workspace
 
 COPY fontconfig.xml /home/marp/.cli-action/
 COPY package.json /home/marp/.cli-action/
-RUN cd /home/marp/.cli-action/ && npm i
+RUN cd /home/marp/.cli-action/ && npm ci
 COPY entrypoint.js /home/marp/.cli-action/
 
 # Custom engine
