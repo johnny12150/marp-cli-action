@@ -9,12 +9,15 @@ module.exports = (opts) => new Marp(opts)
   .use(({ marpit }) => {
       const { highlighter } = marpit
   
-      // Override Marp Core's highlighter to wrap each lines by ordered list items
-      marpit.highlighter = (...args) => {
-        const original = highlighter(...args)
+      marpit.highlighter = function (...args) {
+        const original = highlighter.apply(this, args)
         const listItems = original
           .split(/\n(?!$)/) // Don't split at the trailing newline
-          .map((line) => `<li>${line}</li>`)
+          .map(
+            (line) =>
+              `<li><span data-marp-line-number></span><span>${line}</span></li>`
+          )
   
         return `<ol>${listItems.join('')}</ol>`
-    }
+      }
+    })
