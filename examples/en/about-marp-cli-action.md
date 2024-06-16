@@ -86,7 +86,7 @@ _For Japanese users; Specify `lang: ja-JP` as Marp CLI option. If you do so, Mar
 
 ---
 
-# Highlight the Code Block
+## Highlight the Code Block
 
 ```js {1,2,4-5}
 function foo() {
