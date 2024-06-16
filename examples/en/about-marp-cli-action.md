@@ -86,4 +86,25 @@ _For Japanese users; Specify `lang: ja-JP` as Marp CLI option. If you do so, Mar
 
 ---
 
+# Highlight the Code Block
+
+```js {1,2,4-5}
+function foo() {
+  return bar().then((res) => {
+    return res.doSomething()
+  })
+}
+```
+
+<style>
+.highlighted-line {
+  background-color: #ff0;
+  display: block;
+  margin: 0 -16px;
+  padding: 0 16px;
+}
+</style>
+
+---
+
 # Enjoy writing slides! :v: <!--fit-->
