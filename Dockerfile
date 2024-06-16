@@ -7,6 +7,9 @@ COPY fontconfig.xml /home/marp/.cli-action/
 COPY package.json /home/marp/.cli-action/
 RUN cd /home/marp/.cli-action/ && npm i
 COPY entrypoint.js /home/marp/.cli-action/
+
+# Custom engine
+RUN npm i @marp-team/marp-core --save-dev
 COPY engine.mjs /home/marp/.cli-action/
 
 ENTRYPOINT ["/home/marp/.cli-action/entrypoint.js"]
