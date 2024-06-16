@@ -131,7 +131,7 @@ async function marpCli(userConfigFilePath, config) {
   await exec("node", [
     "/home/marp/.cli/marp-cli.js",
     "--engine", 
-    "./engine.mjs"
+    "./engine.mjs",
     "--config-file",
     configPath,
     "-I",
