@@ -129,8 +129,7 @@ async function marpCli(userConfigFilePath, config) {
   await fs.writeFile(configPath, JSON.stringify(config));
 
   await exec("node", [
-    // "/home/marp/.cli/marp-cli.js",
-    "marp",
+    "/home/marp/.cli/marp-cli.js",
     "--engine", 
     "/home/marp/.cli-action/engine.js",
     "--config-file",
