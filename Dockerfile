@@ -10,7 +10,7 @@ COPY entrypoint.js /home/marp/.cli-action/
 
 # Custom engine
 RUN npm i @marp-team/marp-core --save-dev
-COPY engine.mjs /home/marp/.cli-action/
+COPY engine.js /home/marp/.cli-action/
 
 ENTRYPOINT ["/home/marp/.cli-action/entrypoint.js"]
 CMD []
