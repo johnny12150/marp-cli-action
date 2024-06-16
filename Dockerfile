@@ -12,5 +12,7 @@ COPY entrypoint.js /home/marp/.cli-action/
 RUN npm i @marp-team/marp-core markdown-it-highlight-lines --save-dev
 COPY engine.js /home/marp/.cli-action/
 
+RUN npm list --depth=0
+
 ENTRYPOINT ["/home/marp/.cli-action/entrypoint.js"]
 CMD []
