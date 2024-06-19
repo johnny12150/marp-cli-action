@@ -13,17 +13,25 @@ paginate: true
 
 pre ol {
   all: unset;
-  display: block;
+  display: grid;
+  grid-template-columns: auto 1fr;
   counter-reset: line-number 0;
 }
+
 pre ol li {
-  all: unset;
-  display: list-item;
-  list-style: none;
+  display: contents;
 }
-pre ol li::before {
-  content: counter(line-number) " ";
+
+pre ol li span[data-marp-line-number]::before {
+  display: block;
+  content: counter(line-number) ': ';
   counter-increment: line-number;
+  text-align: right;
+}
+
+pre .highlighted-line > * {
+  background-color: #ff6;
+}
 </style>
 
 <!-- _paginate: false -->
