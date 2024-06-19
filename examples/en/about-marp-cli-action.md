@@ -4,13 +4,6 @@ paginate: true
 ---
 
 <style>
-.highlighted-line {
-  background-color: #ff0;
-  display: block;
-  margin: 0 -16px;
-  padding: 0 16px;
-}
-
 pre ol {
   all: unset;
   display: grid;
