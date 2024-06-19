@@ -1,11 +1,9 @@
 const { Marp } = require('@marp-team/marp-core')
 const { Marpit } = require('@marp-team/marpit')
-const highlightLines = require('markdown-it-highlight-lines')
 
 const marpit = new Marpit()
 
 module.exports = (opts) => new Marp(opts)
-  .use(highlightLines)
   .use(({ marpit }) => {
       const { highlighter } = marpit
   
