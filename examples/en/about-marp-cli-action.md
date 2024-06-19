@@ -17,7 +17,7 @@ pre ol li {
 
 pre ol li span[data-marp-line-number]::before {
   display: block;
-  content: counter(line-number) ': ';
+  content: counter(line-number) ' ';
   counter-increment: line-number;
   text-align: right;
 }
