@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-      - feature/highlight-code
+      - feature/code-line-number
 
 jobs:
   publish:
@@ -16,10 +16,17 @@ jobs:
         with:
           config-file: ./examples/en/.marprc.yml
 
-      - name: Convert Markdown into HTML and PDF (ja)
-        uses: ./
+      # - name: Convert Markdown into HTML and PDF (ja)
+      #   uses: ./
+      #   with:
+      #     config-file: ./examples/ja/.marprc.yml
+
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v4
         with:
-          config-file: ./examples/ja/.marprc.yml
+          name: slides
+          path: |
+            examples/en/about-marp-cli-action.html
 
       # - name: Deploy to GitHub Pages
       #   uses: peaceiris/actions-gh-pages@v3

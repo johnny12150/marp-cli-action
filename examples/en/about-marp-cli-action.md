@@ -3,6 +3,30 @@ marp: true
 paginate: true
 ---
 
+<style>
+pre ol {
+  all: unset;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  counter-reset: line-number 0;
+}
+
+pre ol li {
+  display: contents;
+}
+
+pre ol li span[data-marp-line-number]::before {
+  display: block;
+  content: counter(line-number) ' ';
+  counter-increment: line-number;
+  text-align: right;
+}
+
+pre .highlighted-line > * {
+  background-color: #ff6;
+}
+</style>
+
 <!-- _paginate: false -->
 
 # About [Marp CLI Action](https://github.com/KoharaKazuya/marp-cli-action) <!-- fit -->
@@ -95,15 +119,6 @@ function foo() {
   })
 }
 ```
-
-<style>
-.highlighted-line {
-  background-color: #ff0;
-  display: block;
-  margin: 0 -16px;
-  padding: 0 16px;
-}
-</style>
 
 ---
 
