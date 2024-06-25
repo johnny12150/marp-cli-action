@@ -3,6 +3,8 @@ FROM marpteam/marp-cli:v3.4.0
 USER root
 WORKDIR /github/workspace
 
+RUN apk update && apk add liberation-fonts
+
 COPY fontconfig.xml /home/marp/.cli-action/
 COPY package.json package-lock.json /home/marp/.cli-action/
 RUN cd /home/marp/.cli-action/ && npm ci
